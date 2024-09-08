@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply select-all font-light md:text-7xl text-5xl dark:text-white text-center transition-all p-1 selection:bg-black/10 
+    selection:dark:bg-white/10;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-xl text-white bg-black/90 p-4 border select-none
+           dark:bg-white/90  dark:text-black 
+           hover:border-black hover:text-black hover:bg-white/90
+           hover:dark:text-white hover:dark:bg-black/90 hover:dark:border-white
+           transition-colors;
+  }
+
+  .btn-clicked {
+    @apply rounded-xl
+    border border-black text-black bg-white/90 
+    dark:text-white dark:border-white dark:bg-black/90;
+  }
+}

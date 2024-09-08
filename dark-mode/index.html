@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark and Light Mode</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="font-mono">
+    <div
+      class="flex justify-center items-center w-screen h-screen bg-white/90 dark:bg-black/90 transition-colors"
+    >
+      <div
+        class="flex justify-center items-center text-wrap flex-col gap-10 w-full"
+      >
+        <h1>Dark Mode</h1>
+        <div
+          class="flex md:gap-5 gap-3 justify-around md:w-1/2 w-10/12 px-2 flex-wrap"
+        >
+          <button
+            class="btn flex-auto md:order-1 order-3"
+            onclick="handleClick('system')"
+          >
+            System Preference
+          </button>
+          <button
+            onclick="handleClick('dark')"
+            class="btn flex-auto md:order-2 order-1"
+          >
+            Dark
+          </button>
+          <button
+            onclick="handleClick('light')"
+            class="btn flex-auto md:order-3 order-2"
+          >
+            Light
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function applySystemPreference() {
+        let system = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (system) document.documentElement.classList.add("dark");
+        else document.documentElement.classList.remove("dark");
+        document.querySelector("h1").innerHTML = "System Preference Mode";
+      }
+
+      function handleClick(buttonName) {
+        console.log(buttonName);
+        if (buttonName === "system") applySystemPreference();
+        else if (buttonName == "dark") {
+          document.documentElement.classList.add("dark");
+          document.querySelector("h1").innerHTML = "Dark Mode";
+        } else {
+          document.documentElement.classList.remove("dark");
+          document.querySelector("h1").innerHTML = "Light Mode";
+        }
+        localStorage.setItem("theme", buttonName);
+      }
+
+      let theme = localStorage.getItem("theme");
+      if (theme) handleClick(theme);
+      else applySystemPreference();
+    </script>
+  </body>
+</html>
