@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Modal</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Global Container -->
+    <div
+      class="flex items-center justify-center min-h-screen bg-pink-100 font-serif p-4 md:p-0"
+    >
+      <!-- Main container -->
+      <div class="relative rounded-xl shadow-xl flex">
+        <div
+          class="flex flex-col justify-center p-20 bg-white md:rounded-l-xl rounded-xl"
+        >
+          <div class="py-6">
+            <h2 class="text-3xl font-semibold">Log In</h2>
+          </div>
+
+          <div class="py-2 max-w-sm">
+            <p class="text-sm font-light">
+              Login to your account to download and upload videos, images and
+              audios etc.,
+            </p>
+          </div>
+
+          <div class="py-6">
+            <input
+              type="text"
+              placeholder="Enter your email address"
+              class="px-4 py-6 rounded-lg text-sm placeholder:text-sm text-gray-700 placeholder:text-gray-700 focus:outline-none border-2 border-gray-200 w-full"
+            />
+          </div>
+
+          <div
+            class="py-2 flex space-y-3 flex-col md:flex-row md:items-center md:justify-between"
+          >
+            <p class="text-cyan-600 text-center">Forgot Password?</p>
+            <button
+              class="border-b-4 hover:border-b-0 hover:border-t-4 border-cyan-700 text-white bg-cyan-600 hover:bg-cyan-700 rounded-lg hover:shadow-lg"
+            >
+              <p
+                class="flex space-x-3 justify-center md:justify-normal py-6 px-8 shadow-lg"
+              >
+                <span>Next </span>
+                <span>-></span>
+              </p>
+            </button>
+          </div>
+
+          <div class="py-4 border-b-2 border-gray-200"></div>
+          <div class="py-4">
+            <p class="text-center text-sm font-medium text-gray-600">
+              Or log in with
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 md:justify-between"
+          >
+            <button
+              class="w-full p-4 px-6 flex justify-center space-x-3 border-2 border-gray-200 rounded-lg group hover:shadow-md hover:-translate-y-0.5 hover:transform hover:duration-150"
+            >
+              <img
+                src="./images/google.png"
+                class="w-6 h-6 group-hover:scale-105"
+              />
+              <span>Google</span>
+            </button>
+            <button
+              class="w-full p-4 px-6 flex justify-center space-x-3 border-2 border-gray-200 rounded-lg group hover:shadow-md hover:-translate-y-0.5 hover:transform hover:duration-150"
+            >
+              <img
+                src="./images/google.png"
+                class="w-6 h-6 group-hover:scale-105"
+              />
+              <span>Google</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <img
+          src="./images/image.jpg"
+          class="rounded-r-xl hidden md:block relative w-[432px]"
+        />
+
+        <div
+          class="absolute top-2 right-2 rounded-full bg-white/70 hover:-translate-y-0.5 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 50"
+            class="w-8 h-8 p-2"
+          >
+            <path
+              d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
