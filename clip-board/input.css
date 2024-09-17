@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply text-5xl text-center font-semibold text-darkGrayishBlue;
+  }
+
+  p {
+    @apply font-normal text-center text-grayishBlue;
+  }
+
+  h3 {
+    @apply text-3xl text-center md:text-left font-semibold text-darkGrayishBlue;
+  }
+
+  h4 {
+    @apply text-center text-2xl font-semibold text-darkGrayishBlue;
+  }
+}
+
+.icon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+  @apply shadow-sm;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-10;
+}
+
+.btn-group {
+  @apply w-full flex flex-col md:flex-row md:justify-center space-y-4 md:space-y-0 md:space-x-4;
+}
+
+.btn {
+  @apply rounded-full px-6 py-4 text-center shadow-md hover:shadow-lg text-white;
+}
+
+body {
+  background-image: url("../images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-with: 576px) {
+  body {
+    background-image: url("../images/bg-header-mobile   .png");
+  }
+}
