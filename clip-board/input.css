@@ -14,6 +14,16 @@
   h3 {
     @apply text-3xl text-center md:text-left font-semibold text-darkGrayishBlue;
   }
+
+  h4 {
+    @apply text-center text-2xl font-semibold text-darkGrayishBlue;
+  }
+}
+
+.icon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+  @apply shadow-sm;
 }
 
 .section {
